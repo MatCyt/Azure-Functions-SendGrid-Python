@@ -62,6 +62,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
         sg = sendgrid.SendGridAPIClient(api_key=sendgrid_api_key)
         response = sg.client.mail.send.post(request_body=mail.get())
+        
+        return func.HttpResponse(f"mail to {receipent_email} sent successfully.")
 
     except Exception as e:
         logging.error(f'failed to call sendgrid api - response: {response.status_code} - message: {str(e)}')
