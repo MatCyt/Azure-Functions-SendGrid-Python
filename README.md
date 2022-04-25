@@ -1,4 +1,4 @@
-# Azure-Functions-SendGrid-Python
+# Azure-Sendgrid-with-Python-and-AZ-Functions
 How to run automated mailing in Azure - few end to end examples using Azure Functions, Python and Sendgrid. 
   
 ---
